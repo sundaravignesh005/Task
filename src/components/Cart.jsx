@@ -39,7 +39,7 @@ function CartItem({ item, onQty, onRemove }) {
           disabled={item.qty >= item.stock}
           onClick={() => onQty(item.id, item.qty + 1)}
         >
-        ++
+        +
         </button>
       </div>
       <span className="line-total">{money(item.price *item.qty)}</span>

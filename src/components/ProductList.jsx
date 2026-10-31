@@ -6,10 +6,15 @@ export default function ProductList({ products, qtyOf, onAdd }) {
     <section className="products" aria-labelledby="products-h">
       <h2 id="products-h">Products</h2>
       <ul className="grid">
+
         {products.map((p) => {
+
           const inCart = qtyOf(p.id);
+         
           const maxed = inCart >= p.stock;
+         
           return (
+
                  <li key={p.id} className="card">
               <div className="card-body">
        <h3>{p.name}</h3>

@@ -1,11 +1,9 @@
-// Pure pricing function. No React, no DOM.
-// All maths is done in integer paise to avoid floating point drift.
-// Output values are rupees (exact paise / 100).
+
 
 export const COUPON_CODE = "SAVE10";
-export const COUPON_MIN_PAISE = 100000; // Rs 1000
-export const FREE_SHIPPING_ABOVE_PAISE = 99900; // strictly above Rs 999
-export const SHIPPING_PAISE = 5000; // Rs 50
+export const COUPON_MIN_PAISE = 100000; 
+export const FREE_SHIPPING_ABOVE_PAISE = 99900; 
+export const SHIPPING_PAISE = 5000;
 
 const toPaise = (rupees) => Math.round(rupees * 100);
     const toRupees = (paise) => paise / 100;
@@ -28,7 +26,7 @@ export function calculateCart(items, couponCode = "") {
     0
   );
 
-  // this one will be  the Coupon
+  // this onee will be  the Coupon
 
   const code = String(couponCode ?? "").trim().toUpperCase();
 
